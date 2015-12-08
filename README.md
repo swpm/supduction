@@ -6,6 +6,7 @@ Supduction is a Supply Production and Distribution framework to support strategi
 Supduction models the gathering of supply generation inputs (i.e. raw materials), the production method (i.e. what is needed and how long does it take), and the distribution of the finished resources. The target application is wargames, but it could be applied in other areas. In such games, supduction isn't the main simulator and doesn't currently (Dec 2015) support modeling of research.
 
 Features:
+
 1. Autonomous Agent Model Backbone
 
 2. Routed Movement and Graph Path Finding
