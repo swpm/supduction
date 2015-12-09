@@ -1,0 +1,27 @@
+import sys
+import pygame
+pygame.init()
+
+window = pygame.display.set_mode((640,480))
+
+pygame.display.flip()
+
+cities = [(10,10), (20,20), (30,30), (10,30)];
+links = [(1,2), (3,4), (2,4), (1,3)];
+
+dot_size = 3
+
+for city in cities:
+	pygame.draw.circle(window, 0x0000FF, city, dot_size, 1)
+
+for link in links:
+	pygame.draw.line(window, 0xFFFFFF, cities[link[0]], cities[link[1]])
+
+pygame.display.flip()
+
+while True:
+	for event in pygame.event.get():
+		if event.type == pygame.QUIT:
+			sys.exit(0)
+		else:
+			print event

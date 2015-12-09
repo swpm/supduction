@@ -1,0 +1,300 @@
+{"list":[
+{
+	"name":"Whitstable",
+	"loc":[10,10],
+	"links":["Canterbury", "Ramsgate"],
+	"possession":"Allied",
+	"attributes":"Factory"
+},
+{
+	"name":"Canterbury",
+	"loc":[22,25],
+	"links":["Whitstable", "Ramsgate", "Dover", "Kent"],
+	"possession":"Allied"
+},
+{
+	"name":"Ramsgate",
+	"loc":[35,10],
+	"links":["Canterbury", "Whitstable", "Breskins","Kent"],
+	"possession":"Allied"
+},
+{
+	"name":"Dover",
+	"loc":[10,37],
+	"links":["Canterbury", "Kent", "Bethune"],
+	"possession":"Allied"
+},
+{
+	"name":"Kent",
+	"loc":[30, 37],
+	"links":["Canterbury", "Dunkirk", "Breskins"],
+	"possession":"Allied"
+},
+
+{
+	"name":"Dunkirk",
+	"loc":[105, 105],
+	"links":["Dover"],
+	"possession":"Allied"
+},
+{
+	"name":"Breskins",
+	"loc":[200, 45],
+	"links":["Dunkirk", "Antwerp"],
+	"possession":"Allied"
+},
+{
+	"name":"Roulers",
+	"loc":[200, 95],
+	"links":["Dunkirk", "Breskins", "Charleroi", "Gent", "Cambrai"],
+	"possession":"Allied"
+},
+{
+	"name":"Antwerp",
+	"loc":[300, 35],
+	"links":["Breskens"],
+	"possession":"Allied"
+},
+{
+	"name":"Maaseik",
+	"loc":[360, 55],
+	"links":["Antwerp"],
+	"possession":"Axis"
+},
+{
+	"name":"Hasselt",
+	"loc":[370, 75],
+	"links":["Maaseik","Liege"],
+	"possession":"Axis"
+},
+{
+	"name":"Roemond",
+	"loc":[423, 42],
+	"links":["Maaseik","Hasselt","Aachen"],
+	"possession":"Axis"
+},
+{
+	"name":"Venlo",
+	"loc":[470, 52],
+	"links":["Roemond","Essen"],
+	"possession":"Axis"
+},
+{
+	"name":"Brussels",
+	"loc":[285, 95],
+	"links":["Antwerp", "Namur"],
+	"possession":"Allied"
+},
+{
+	"name":"Cambrai",
+	"loc":[175,175],
+	"links":["Dunkirk"],
+	"possession":"Allied"
+},
+{
+	"name":"Bethune",
+	"loc":[88,165],
+	"links":["Dunkirk", "Amiens", "Cambrai"],
+	"possession":"Allied"
+},
+{
+	"name":"Amiens",
+	"loc":[45,255],
+	"links":["Cambrai"],
+	"possession":"Allied"
+},
+{
+	"name":"LaFere",
+	"loc":[202,255],
+	"links":["Riems", "Noyon", "Cambrai"],
+	"possession":"Allied"
+},{
+	"name":"Noyon",
+	"loc":[105,255],
+	"links":["Amiens"],
+	"possession":"Allied"
+},
+{
+	"name":"Maubeuge",
+	"loc":[200, 175],
+	"links":["Cambrai", "Charleroi"],
+	"possession":"Allied"
+},
+{
+	"name":"Charleroi",
+	"loc":[250, 135],
+	"links":["Cambrai", "Maubeuge"],
+	"possession":"Allied"
+},
+{
+	"name":"Gent",
+	"loc":[244, 72],
+	"links":["Charleroi", "Breskins", "Brussels"],
+	"possession":"Allied"
+},
+{
+	"name":"Namur",
+	"loc":[350, 100],
+	"links":["Charleroi", "Feschaux", "Ciney", "Hasselt"],
+	"possession":"Allied"
+},
+{
+	"name":"Dinant",
+	"loc":[330, 125],
+	"links":["Namur"],
+	"possession":"Allied"
+},
+{
+	"name":"Haybes",
+	"loc":[345, 133],
+	"links":["Dinant", "Feschaux"],
+	"possession":"Allied"
+},
+{
+	"name":"Chimay",
+	"loc":[277, 160],
+	"links":["Charleville", "Sedan", "Maubeuge"],
+	"possession":"Allied"
+},
+{
+	"name":"Riems",
+	"loc":[280, 230],
+	"links":["Clermont", "Chimay", "Cambrai"],
+	"possession":"Allied"
+},
+{
+	"name":"Charleville",
+	"loc":[355, 157],
+	"links":["Haybes"],
+	"possession":"Allied"
+},
+{
+	"name":"Sedan",
+	"loc":[375, 195],
+	"links":["Charleville"],
+	"possession":"Allied"
+},
+{
+	"name":"Bouzancy",
+	"loc":[385, 209],
+	"links":["Sedan"],
+	"possession":"Allied"
+},
+{
+	"name":"Montfoucon",
+	"loc":[372, 225],
+	"links":["Bouzancy"],
+	"possession":"Allied"
+},
+{
+	"name":"Clermont",
+	"loc":[389, 239],
+	"links":["Montfoucon", "Montmedy", "Verdun"],
+	"possession":"Allied"
+},
+{
+	"name":"Liege",
+	"loc":[425, 90],
+	"links":["Namur"],
+	"possession":"Axis"
+},
+{
+	"name":"Ciney",
+	"loc":[400, 105],
+	"links":["Liege"],
+	"possession":"Axis"
+},
+{
+	"name":"Feschaux",
+	"loc":[388, 117],
+	"links":["Ciney"],
+	"possession":"Axis"
+},
+{
+	"name":"Boullion",
+	"loc":[370, 149],
+	"links":["Feschaux", "Charleville"],
+	"possession":"Axis"
+},
+{
+	"name":"Florenville",
+	"loc":[425, 181],
+	"links":["Boullion", "Sedan", "Bouzancy"],
+	"possession":"Axis"
+},
+{
+	"name":"Montmedy",
+	"loc":[433, 221],
+	"links":["Florenville"],
+	"possession":"Axis"
+},
+{
+	"name":"Verdun",
+	"loc":[420, 247],
+	"links":["Montmedy"],
+	"possession":"Axis"
+},
+{
+	"name":"Luxembourg",
+	"loc":[520, 247],
+	"links":["Verdun"],
+	"possession":"Axis"
+},
+{
+	"name":"Cologne",
+	"loc":[575, 190],
+	"links":["Luxembourg"],
+	"possession":"Axis"
+},
+{
+	"name":"Dusseldorf",
+	"loc":[562, 115],
+	"links":["Cologne", "Essen"],
+	"possession":"Axis"
+},
+{
+	"name":"Manhay",
+	"loc":[482, 134],
+	"links":["Dusseldorf"],
+	"possession":"Axis"
+},
+{
+	"name":"Marche",
+	"loc":[444, 124],
+	"links":["Manhay", "Ciney", "Liege", "Aachen"],
+	"possession":"Axis"
+},
+{
+	"name":"Wellin",
+	"loc":[415, 141],
+	"links":["Marche", "Boullion", "Florenville"],
+	"possession":"Axis"
+},
+{
+	"name":"Bastogne",
+	"loc":[462, 154],
+	"links":["Manhay", "Arlon","Florenville"],
+	"possession":"Axis"
+},
+{
+	"name":"Arlon",
+	"loc":[500, 201],
+	"links":["Luxembourg", "Montmedy"],
+	"possession":"Axis"
+},
+{
+	"name":"Aachen",
+	"loc":[500, 85],
+	"links":["Liege"],
+	"possession":"Axis"
+},
+{
+	"name":"Essen",
+	"loc":[610, 95],
+	"links":["Aachen"],
+	"possession":"Axis",
+	"attributes":"Factory"
+}
+
+]
+}
