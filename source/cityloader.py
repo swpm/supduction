@@ -1,44 +1,38 @@
+#### Copyright (c) 2015, swpm, Jeffrey E. Erickson
+#### All rights reserved.
+#### See the accoompanying LICENSE file for terms of use
+
 import json
-
-cities = []
-locations = []
-links = []
-possession = []
+from SwpmGraph import GraphCity
+from SwpmGraph import GraphLink
 
 
-def load_map(path = "./cities.json"):
-	json_data = open(path)
-	data = json.load(json_data)
+def load_map(city_data_path = "./../data/cities.json", links_data_path = "./../data/links.json"):
+	json_data = open(city_data_path)
+	city_data = json.load(json_data)
 	map_data = []
 	# first, populate the cities, with possession
 	i = 0
-	for dict in data["list"]:
-		new_dict = {}
-		new_dict["idx"] = i
-		new_dict["link_idx"] = []
-		new_dict["city"] = dict["name"]
-		new_dict["loc"] = (dict["loc"][0], dict["loc"][1])
-		if(dict["possession"] == "Allied"):
-			new_dict["possession"] = 1
-		elif(dict["possession"] == "Axis"):
-			new_dict["possession"] = 2
-		else:
-			new_dict["possession"] = 0	
-		i = i+1
+	for entry in city_data["data"]:
+		new_city = GraphCity(entry['id'], entry['name'], entry['x'], entry['y'], entry['orig-country'])
+		map_data.append(new_city)
+
+	# Now, add in each link
+	json_data = open(links_data_path)
+	link_data = json.load(json_data)
+	for entry in link_data["data"]:
+		# Generate the link
+		link = GraphLink(entry['lcp'], entry['rcp'])
+		# append the link to both cities
+		for i in range(0,len(map_data)):
+			if map_data[i].idx == entry['lcp'] or map_data[i].idx == entry['rcp']:
+				map_data[i].AddLink(link)
 		
-		map_data.append(new_dict)
 
-	for dict in data["list"]:
-		for element in map_data:
-			if dict["name"] == element["city"]:
-				for link in dict["links"]:
-					for entry in map_data:
-						if entry["city"] == link:
-							element["link_idx"].append(entry["idx"])
-							entry["link_idx"].append(element["idx"])
-
-
-	print json.dumps(map_data, sort_keys = True, indent = 3)
+	for city in map_data:
+		if city.idx == 28:
+			print city.toString()
+			break
 
 		
 	return map_data

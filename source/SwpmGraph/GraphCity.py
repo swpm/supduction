@@ -11,12 +11,12 @@
 
 class GraphCity():
     
-    def __init__(self, idx, name, x_loc, y_loc, links, facilities, possession):
+    def __init__(self, idx, name, x_loc, y_loc, possession):
         self.idx = idx
         self.name = name
         self.location = (x_loc, y_loc)
-        self.links = links
-        self.facilities = facilities
+        self.links = []
+        self.facilities = []
         self.possession = possession
         
     def AddLink(self, newLink):
