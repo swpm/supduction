@@ -67,15 +67,23 @@ class MyWidget(ScatterLayout):
     def update_canvas(self, **kwargs):
         self.canvas.clear()
         with self.canvas:
-            Color(1,1,0)
+
             mapData = GetGraph()[0]
-            print(mapData)
+            lineData = GetGraph()[1]
+            for line in lineData:
+                Color(0, 1, 0)
+                Line(points=[int(line[0][0]), int(line[1][0])-3382, int(line[0][1]), int(line[1][1])-3382], width=1)
             for city in mapData:
+                Color(1, 1, 0)
                 Line(circle=(city.location[0], city.location[1] - 3382, 1), width=1)
         self.scale = 1.0
 
     def on_touch_down(self, touch):
-
+        if touch.is_mouse_scrolling:
+            if touch.button == 'scrolldown':
+                self.scale += 0.05
+            else:
+                self.scale -= 0.05
 
         touch.push()
         touch.apply_transform_2d(self.to_local)
